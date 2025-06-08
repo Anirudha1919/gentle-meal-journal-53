@@ -3,11 +3,17 @@ import React, { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { CheckCircle2, Heart, Brain, Smile, Edit3 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import GoalSelection from '@/components/GoalSelection';
 import MealPreview from '@/components/MealPreview';
 
 const Index = () => {
   const [selectedGoal, setSelectedGoal] = useState<string | null>(null);
+  const navigate = useNavigate();
+
+  const handleGetStarted = () => {
+    navigate('/dashboard');
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-nutrition-accent via-background to-nutrition-accent/50">
@@ -49,6 +55,7 @@ const Index = () => {
               Join others who are discovering a gentler way to understand their relationship with food.
             </p>
             <Button 
+              onClick={handleGetStarted}
               size="lg" 
               className="bg-nutrition-green hover:bg-nutrition-light-green text-white px-10 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105 font-inter"
             >
