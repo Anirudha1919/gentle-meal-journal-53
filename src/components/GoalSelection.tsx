@@ -40,28 +40,28 @@ interface GoalSelectionProps {
 const GoalSelection = ({ selectedGoal, onGoalSelect }: GoalSelectionProps) => {
   return (
     <div className="text-center">
-      <h2 className="text-2xl font-light text-slate-800 mb-8">
+      <h2 className="text-2xl font-medium text-nutrition-text mb-8 font-inter">
         What's your goal with this journal?
       </h2>
       <div className="grid gap-4 md:grid-cols-2 max-w-2xl mx-auto">
         {goals.map((goal) => (
           <Card
             key={goal.id}
-            className={`p-6 cursor-pointer transition-all duration-200 hover:scale-105 border-2 ${
+            className={`p-6 cursor-pointer transition-all duration-300 hover:scale-105 border-2 rounded-2xl ${
               selectedGoal === goal.id
-                ? 'border-emerald-500 bg-emerald-50 shadow-md'
-                : 'border-slate-200 bg-white/60 hover:border-emerald-300 hover:bg-white/80'
+                ? 'border-nutrition-green bg-nutrition-green/5 shadow-lg'
+                : 'border-border/30 bg-card/80 hover:border-nutrition-green/50 hover:bg-card'
             }`}
             onClick={() => onGoalSelect(goal.id)}
           >
             <div className="flex items-center gap-3">
-              <div className={`p-2 rounded-full ${
-                selectedGoal === goal.id ? 'bg-emerald-500 text-white' : 'bg-slate-100 text-slate-600'
+              <div className={`p-3 rounded-xl transition-colors ${
+                selectedGoal === goal.id ? 'bg-nutrition-green text-white' : 'bg-nutrition-accent text-nutrition-text'
               }`}>
                 {goal.icon}
               </div>
-              <span className={`text-sm font-medium ${
-                selectedGoal === goal.id ? 'text-emerald-700' : 'text-slate-700'
+              <span className={`text-sm font-medium font-inter ${
+                selectedGoal === goal.id ? 'text-nutrition-green' : 'text-nutrition-text'
               }`}>
                 {goal.text}
               </span>

@@ -10,21 +10,21 @@ const Index = () => {
   const [selectedGoal, setSelectedGoal] = useState<string | null>(null);
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-emerald-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-nutrition-accent via-background to-nutrition-accent/50">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         {/* Header */}
         <div className="text-center mb-12">
-          <div className="flex justify-center items-center gap-3 mb-4">
-            <div className="p-3 bg-emerald-100 rounded-full">
-              <Edit3 className="w-8 h-8 text-emerald-600" />
+          <div className="flex justify-center items-center gap-3 mb-6">
+            <div className="p-3 bg-nutrition-green rounded-2xl">
+              <Edit3 className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-2xl font-semibold text-emerald-700">NourishNote</h1>
+            <h1 className="text-2xl font-semibold text-nutrition-green font-inter">NourishNote</h1>
           </div>
-          <h1 className="text-4xl md:text-5xl font-light text-slate-800 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-medium text-nutrition-text mb-6 leading-tight font-inter">
             Log what you eat,<br />
             get mindful reflections
           </h1>
-          <p className="font-light mb-8 text-slate-800 text-4xl">
+          <p className="font-normal mb-8 text-nutrition-text text-3xl font-inter">
             No counting, just clarity.
           </p>
         </div>
@@ -41,21 +41,24 @@ const Index = () => {
 
         {/* CTA Section */}
         <div className="text-center">
-          <Card className="p-8 bg-white/80 backdrop-blur-sm border-0 shadow-lg">
-            <h3 className="text-2xl font-light text-slate-800 mb-4">
+          <Card className="p-10 bg-card/90 backdrop-blur-sm border border-nutrition-green/10 shadow-lg rounded-2xl">
+            <h3 className="text-2xl font-medium text-nutrition-text mb-4 font-inter">
               Ready to start your mindful journey?
             </h3>
-            <p className="text-slate-600 mb-6 max-w-md mx-auto">
+            <p className="text-nutrition-text-light mb-8 max-w-md mx-auto font-inter">
               Join others who are discovering a gentler way to understand their relationship with food.
             </p>
-            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-3 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105">
+            <Button 
+              size="lg" 
+              className="bg-nutrition-green hover:bg-nutrition-light-green text-white px-10 py-4 rounded-full text-lg font-medium transition-all duration-200 hover:scale-105 font-inter"
+            >
               Get Started
             </Button>
           </Card>
         </div>
 
         {/* Footer */}
-        <div className="text-center mt-12 text-slate-500 text-sm">
+        <div className="text-center mt-12 text-nutrition-text-light text-sm font-inter">
           <p>Built with care for mindful eating</p>
         </div>
       </div>

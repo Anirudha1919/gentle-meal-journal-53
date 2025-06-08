@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'inter': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -52,16 +56,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
+				// Custom nutrition theme colors
+				'nutrition-dark': 'hsl(var(--nutrition-dark))',
+				'nutrition-green': 'hsl(var(--nutrition-green))',
+				'nutrition-light-green': 'hsl(var(--nutrition-light-green))',
+				'nutrition-accent': 'hsl(var(--nutrition-accent))',
+				'nutrition-text': 'hsl(var(--nutrition-text))',
+				'nutrition-text-light': 'hsl(var(--nutrition-text-light))',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
